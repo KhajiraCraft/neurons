@@ -9,7 +9,11 @@ Team members:
 
 (In 2-4 paragraphs, describe your project concept)
 
+We are edeveloping a web application that will assist students to summarize long and complex educational content into simpler and understable material.The application will use Large langauage models (LLM) with predefined prompts fed to agents to provide customized summaries.
 
+The application could cater to various educational levels including both university and highschool students.In addition, users will be able to generate quizes based on the summaries to foster understanding.
+
+The user interface will allow users to login and prompt the application. The application will respond by providing a summary. It will also allow the user to track their progress and analyse areas where they struggle so as to provide targeted explanations to make them understand better.
 
 # Anticipated Technologies
 
