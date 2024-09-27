@@ -1,13 +1,13 @@
-# Team Name
+# Neurons
 
-Project description (~1 paragraph)
+We are developing a web application that summarizes long and complex text into simpler and understandable content for student. The application uses Large Language Models which we tune using reactor agents using custom prompts to provide easy to understand content.
 
 ## Team Members and Roles
 
 
-*  [Alwana Julliet Imelda](https://github.com/julienyaware/CIS641-HW2-Alwana/tree/main) (Role 1, Role 2)
-* Member 2 (Role 3, Role 4)
-* Member 3 (Role 5, Role 6)
+*  [Alwana Julliet Imelda](https://github.com/julienyaware/CIS641-HW2-Alwana/tree/main) (Backend Developer)
+* [Christopher Khajira](https://github.com/KhajiraCraft/CIS641-HW2-Khajira) (Frontend Developer)
+
 
 ## Prerequisites
 
