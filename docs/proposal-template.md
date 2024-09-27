@@ -39,7 +39,7 @@ We will have meetings every Wednesday for sprint planning to discuss the priorit
 
 DEVELOPMENT 
 
-Tasks from the backlog will be implemented itireratively.The frontend developer will build the user interface that the user will interact with while  the backend developer will set up the API and connect the LLM to the backend.Unit tests and integration tests will be implemented by the whole team.The development cycle should take roughly 7 weeks.
+Tasks from the backlog will be implemented iteratively.The frontend developer will build the user interface that the user will interact with while  the backend developer will set up the API and connect the LLM to the backend.Unit tests and integration tests will be implemented by the whole team.The development cycle should take roughly 7 weeks.
 
 DAILY STANDUPS 
 
