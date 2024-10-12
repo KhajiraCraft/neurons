@@ -4,7 +4,7 @@ The Software Requirements Specification (SRS) for the LLM Powered Education Summ
 
 # Fuctional Requirements
 1. Sign Up and Login
-    1.1 The system shall allow users to register an account using their email and password
+            1.1 The system shall allow users to register an account using their email and password
     1.2 The system shall allow users to login to their accounts by providing their email and password
     1.3 The system shall allow users to reset their password to recover their account in case they forget their password
 
