@@ -1,0 +1,121 @@
+# General ignores for Python, Node.js, and OS-specific files
+.DS_Store
+Thumbs.db
+*.swp
+*.log
+*.out
+*.err
+
+# Ignore environment variables and sensitive files
+.env
+*.env
+
+# --------------------------------------
+# Backend (Flask) specific ignore rules
+# --------------------------------------
+
+# Byte-compiled files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Virtual environments
+backend/venv/
+backend/env/
+backend/ENV/
+
+# Logs
+backend/*.log
+backend/logs/
+
+# Database files
+backend/*.db
+backend/*.sqlite3
+
+# Static and media files (if generated during runtime)
+backend/static/
+backend/media/
+
+# Test coverage reports
+backend/.coverage
+backend/htmlcov/
+
+# Build and packaging files
+backend/build/
+backend/dist/
+backend/*.egg-info
+backend/.eggs/
+backend/pip-wheel-metadata/
+
+# IDE and editor settings
+backend/.idea/
+backend/.vscode/
+
+# PyInstaller output
+backend/dist/
+backend/build/
+backend/*.spec
+
+# --------------------------------------
+# Frontend (React) specific ignore rules
+# --------------------------------------
+
+# Node modules folder (dependencies)
+frontend/node_modules/
+
+# Build output (production-ready files)
+frontend/build/
+
+# Logs
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+
+# Environment variables
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+
+# Coverage reports (from testing tools like Jest)
+frontend/coverage/
+
+# Parcel-bundler cache
+frontend/.cache/
+
+# Storybook build output
+frontend/storybook-static/
+
+# Temporary and lock files
+frontend/*.lock
+frontend/*.bak
+frontend/*.tmp
+frontend/*.tgz
+
+# IDE and editor settings
+frontend/.idea/
+frontend/.vscode/
+frontend/*.swp
+
+# --------------------------------------
+# Global ignores (apply to entire repo)
+# --------------------------------------
+
+# Global log files
+logs/
+*.log
+
+# Global static/media files if generated
+static/
+media/
+
+# Global byte-compiled files
+__pycache__/
+*.pyc
+
+# Global virtual environment (if outside backend)
+venv/
+env/
+ENV/
+

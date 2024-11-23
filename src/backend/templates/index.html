@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Text Summarizer and Quiz Generator</title>
+</head>
+<body>
+    <h1>Text Summarizer and Quiz Generator</h1>
+    <form id="summarize-form">
+        <textarea name="text" placeholder="Paste your text here"></textarea>
+        <button type="submit">Summarize</button>
+    </form>
+    <div id="summary-result"></div>
+    <form id="quiz-form">
+        <textarea name="summary" placeholder="Generated summary"></textarea>
+        <button type="submit">Generate Quiz</button>
+    </form>
+    <div id="quiz-result"></div>
+    <script>
+        document.getElementById("summarize-form").onsubmit = async (e) => {
+            e.preventDefault();
+            const text = e.target.text.value;
+            const response = await fetch("/summarize", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams({ text })
+            });
+            const data = await response.json();
+            document.getElementById("summary-result").innerText = data.summary || data.error;
+        };
+
+        document.getElementById("quiz-form").onsubmit = async (e) => {
+            e.preventDefault();
+            const summary = e.target.summary.value;
+            const response = await fetch("/generate_quiz", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams({ summary })
+            });
+            const data = await response.json();
+            document.getElementById("quiz-result").innerText = JSON.stringify(data, null, 2);
+        };
+    </script>
+</body>
+</html>
