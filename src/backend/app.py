@@ -15,9 +15,9 @@ def index():
 def summarize():
     try:
         # Get JSON data from the request
-        data = request.json
-        text = data.get("text")
-
+        # data = request.json
+        # text = data.get("text")
+        text = request.form.get("text")
         if not text:
             return jsonify({"error": "Text field is required"}), 400
 
@@ -31,8 +31,8 @@ def summarize():
 def generate_quiz_endpoint():
     try:
         # Get JSON data from the request
-        data = request.json
-        summary = data.get("summary")
+
+        summary = request.form.get("summary")
 
         if not summary:
             return jsonify({"error": "Summary field is required"}), 400
