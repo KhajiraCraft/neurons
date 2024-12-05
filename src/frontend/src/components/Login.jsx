@@ -1,18 +1,25 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate, Link } from 'react-router-dom';
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    console.log('Login:', { email, password });
-    // Handle login logic here
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      console.log("User logged in");
+      navigate("/");
+    } catch (error) {
+      console.error("Error logging in:", error.message);
+      alert(error.message);
+    }
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 flex items-center justify-center">
       <motion.div

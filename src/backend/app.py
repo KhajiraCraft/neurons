@@ -2,10 +2,12 @@ from flask import Flask, render_template, request, jsonify
 from dotenv import load_dotenv
 from summarizer.text_summarizer import summarize_text
 from quiz_generator.quiz_maker import generate_quiz
+from flask_cors import CORS
 
 load_dotenv()
 
 app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})  # Allow React's frontend
 
 @app.route("/")
 def index():

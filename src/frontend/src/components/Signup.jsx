@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate, Link } from 'react-router-dom';
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { auth } from "../firebase";
+
 
 const Signup = () => {
   const [name, setName] = useState('');
@@ -8,10 +11,18 @@ const Signup = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleSignup = (e) => {
+  const handleSignup = async (e) => {
     e.preventDefault();
-    console.log('Signup:', { name, email, password });
-    // Handle signup logic here
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      await updateProfile(user, { displayName: name });
+      console.log("User signed up:", user);
+      navigate("/login");
+    } catch (error) {
+      console.error("Error signing up:", error.message);
+      alert(error.message);
+    }
   };
 
   return (
