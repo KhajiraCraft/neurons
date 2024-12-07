@@ -253,5 +253,15 @@ UseCase4 | User Account | FR4.1-FR4.5, NFR1.5, NFR4.1-NFR4.5, NFR5.1-NFR5.5 |
 
 # Software Artifacts
 This section describes the output files and documents produced during the development process.
-* [Activity Diagram - Generate Summary and Quiz](https://github.com/KhajiraCraft/neurons/blob/main/artifacts/Activity%20Diagrams/Diagram1.png)
-* [API Documentation](to_api_docs.pdf)
+* [UseCase1_ContentSummarization](https://github.com/KhajiraCraft/neurons/blob/main/artifacts/Use%20Case%20Diagrams/UseCase1_Content%20Summarization.png)
+* [UseCase2_OutputHandling](https://github.com/KhajiraCraft/neurons/blob/main/artifacts/Use%20Case%20Diagrams/UseCase2_Output%20%20Handling.png)
+* [UseCase3_ProgressTracking](https://github.com/KhajiraCraft/neurons/blob/main/artifacts/Use%20Case%20Diagrams/UseCase3_Progress%20Tracking.png)
+* [UseCase4_UserAccount](https://github.com/KhajiraCraft/neurons/blob/main/artifacts/Use%20Case%20Diagrams/UseCase4_User%20Account.png)
+* [ClassDiagram_Summary](https://github.com/KhajiraCraft/neurons/blob/main/artifacts/Class%20Diagrams/ClassSummary.png)
+* [ClassDiagram_User](https://github.com/KhajiraCraft/neurons/blob/main/artifacts/Class%20Diagrams/ClassUser.png)
+* [ObjectDiagram_MultiObjects](https://github.com/KhajiraCraft/neurons/blob/main/artifacts/Object%20Diagrams/Object1_MultiObjects.png)
+* [Activity Diagram_Diagram 1_Generate Summary and Quiz](https://github.com/KhajiraCraft/neurons/blob/main/artifacts/Activity%20Diagrams/Diagram1.png)
+* [SequenceDiagram_GenerateQuiz](https://github.com/KhajiraCraft/neurons/blob/main/artifacts/Sequence%20Diagrams/Sequence1_Generate%20Quiz%20Sequence.png)
+* [StateDiagram_Summary&Quiz](https://github.com/KhajiraCraft/neurons/blob/main/artifacts/Sequence%20Diagrams/State1_Summary%20and%20Quiz%20Generation.png)
+* [WindowNavDiagram_Summary&Quiz](https://github.com/KhajiraCraft/neurons/blob/main/artifacts/Window%20Nav%20Diagrams/Nav1_Summary%20and%20Quiz%20Window.png)
+
