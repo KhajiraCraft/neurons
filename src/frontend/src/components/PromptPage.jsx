@@ -6,7 +6,6 @@ const PromptPage = () => {
   const [complexText, setComplexText] = useState('');
   const [simplifiedText, setSimplifiedText] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [quizData, setQuizData] = useState(null);
   const navigate = useNavigate();
 
   const handleSimplify = () => {
@@ -16,15 +15,14 @@ const PromptPage = () => {
     }
 
     setIsLoading(true);
-    setSimplifiedText(''); 
+    setSimplifiedText('');
 
-    
     const dataToSend = new FormData();
-    dataToSend.append('text', complexText); 
+    dataToSend.append('text', complexText);
 
     fetch('http://localhost:5000/summarize', {
       method: 'POST',
-      body: dataToSend, 
+      body: dataToSend,
     })
       .then((response) => {
         if (!response.ok) {
@@ -50,13 +48,12 @@ const PromptPage = () => {
       return;
     }
 
-    // Use the simplified text to generate a quiz
     const dataToSend = new FormData();
-    dataToSend.append('summary', simplifiedText); // Key 'summary' matches the backend
+    dataToSend.append('summary', simplifiedText);
 
     fetch('http://localhost:5000/generate_quiz', {
       method: 'POST',
-      body: dataToSend, // Send FormData instead of JSON
+      body: dataToSend,
     })
       .then((response) => {
         if (!response.ok) {
@@ -65,8 +62,7 @@ const PromptPage = () => {
         return response.json();
       })
       .then((data) => {
-        setQuizData(data.quiz || []);
-        navigate('/quizPage');
+        navigate('/quizPage', { state: { quizData: data.quiz } });
       })
       .catch((error) => {
         console.error('Error during quiz generation request:', error);
@@ -149,19 +145,17 @@ const PromptPage = () => {
 
         {isLoading ? (
           <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
-            className="w-full max-w-4xl bg-gray-800 shadow-lg p-6 rounded-lg flex items-center justify-center"
+            className="text-teal-400 font-semibold text-lg"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
           >
-            <div className="text-teal-400 font-semibold text-lg">Processing...</div>
+            Processing...
           </motion.div>
         ) : (
           <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
             className="w-full max-w-4xl bg-gray-800 shadow-lg p-6 rounded-lg"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
           >
             <h3 className="text-xl font-semibold text-teal-400 mb-4">Simplified Text:</h3>
             <p className="text-gray-300">
@@ -171,10 +165,9 @@ const PromptPage = () => {
         )}
 
         <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
-          className="w-full max-w-4xl bg-gray-800 shadow-lg p-6 rounded-lg mt-6 text-center"
+          className="mt-6"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
         >
           <button
             onClick={handleGenerateQuiz}
@@ -189,8 +182,7 @@ const PromptPage = () => {
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, ease: 'easeOut' }}
-          className="max-w-7xl mx-auto px-4 text-center"
+          className="text-center"
         >
           <p>&copy; {new Date().getFullYear()} SOMA. All rights reserved.</p>
         </motion.div>
