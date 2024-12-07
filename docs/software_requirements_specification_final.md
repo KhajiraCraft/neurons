@@ -253,5 +253,5 @@ UseCase4 | User Account | FR4.1-FR4.5, NFR1.5, NFR4.1-NFR4.5, NFR5.1-NFR5.5 |
 
 # Software Artifacts
 This section describes the output files and documents produced during the development process.
-* [User Guide](to_user_guide.pdf)
+* [Activity Diagram - Generate Summary and Quiz](https://github.com/KhajiraCraft/neurons/blob/main/artifacts/Activity%20Diagrams/Diagram1.png)
 * [API Documentation](to_api_docs.pdf)
