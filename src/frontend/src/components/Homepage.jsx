@@ -36,12 +36,12 @@ const Homepage = () => {
                 </Link>
               </li> {/* Updated to use Link for navigation */}
               <li>
-              <Link to="/quizPage" className="hover:text-teal-300">
-                  Features
+              <Link to="/signup" className="hover:text-teal-300">
+                  Signup
                 </Link>
               </li>
               <li>
-              <Link to="/progressPage" className="hover:text-teal-300">
+              <Link to="/" className="hover:text-teal-300">
                   About us 
                 </Link>
               </li>
