@@ -56,7 +56,7 @@ In the project root directory, you will need to install the following dependenci
 
 ### Frontend
 
-1. In the frontend directory, run the following command to start the React development server:
+1. You will first need to add the Firebase API key in the firebase.js file since the application uses Firebase. In the frontend directory, run the following command to start the React development server:
     ```bash
     npm start
     ```
@@ -65,7 +65,7 @@ In the project root directory, you will need to install the following dependenci
 
 ### Backend
 
-1. In the backend directory, you can run the Flask application by executing:
+1. You will first need to add the OpenAI API key in the .env file since the app uses the ChatGPT LLM.In the backend directory, you can run the Flask application by executing:
     ```bash
     python app.py
     ```
